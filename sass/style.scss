@@ -59,6 +59,27 @@ a {
 .el_pageTitle {
   font-size: 3rem;
 }
+.bl_bgiCarousel {
+  position: absolute;
+  top: 68px;
+  left: 47px;
+  // height: 240px;
+  width: 180px;
+  margin: 0;
+  padding: 0;
+  &_wrapper {
+    position: relative;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 480px;
+    width: 320px;
+  }
+  &_img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
 // ================================================================
 // helper
 // ================================================================

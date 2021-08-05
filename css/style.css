@@ -22,4 +22,26 @@ a {
 
 .el_pageTitle {
   font-size: 3rem;
+}
+
+.bl_bgiCarousel {
+  position: absolute;
+  top: 68px;
+  left: 47px;
+  width: 180px;
+  margin: 0;
+  padding: 0;
+}
+.bl_bgiCarousel_wrapper {
+  position: relative;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 480px;
+  width: 320px;
+}
+.bl_bgiCarousel_img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=style.css.map */
