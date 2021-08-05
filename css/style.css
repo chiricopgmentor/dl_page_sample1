@@ -1,0 +1,25 @@
+:root {
+  --heightHeader: 96px;
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --heightHeader: 36px;
+  }
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Noto Serif", serif;
+  font-family: "Noto Serif JP", serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.el_pageTitle {
+  font-size: 3rem;
+}/*# sourceMappingURL=style.css.map */
