@@ -1,10 +1,18 @@
+:root {
+  --heightTitle: 170px;
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --heightTitle: 100px;
+  }
+}
 html {
   font-size: 62.5%;
 }
 
 body {
-  font-family: "Noto Serif", serif;
-  font-family: "Noto Serif JP", serif;
+  font-family: sans-serif;
 }
 
 a {
@@ -12,7 +20,6 @@ a {
 }
 
 .ly_pageWrapper {
-  width: 100%;
   max-width: 1030px;
   margin-right: auto;
   margin-left: auto;
@@ -36,87 +43,47 @@ a {
   }
 }
 
-.ly_contentBody {
-  margin-left: 80px;
-}
-@media screen and (max-width: 768px) {
-  .ly_contentBody {
-    margin-left: 0;
-  }
-}
-
 .el_pageTitle {
   font-size: 5rem;
   text-align: center;
+  margin-bottom: 60px;
 }
 @media screen and (max-width: 768px) {
   .el_pageTitle {
     font-size: 3rem;
+    margin-bottom: 30px;
   }
 }
 
 .bl_spScreenShot {
-  position: relative;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin: 0;
-  height: 600px;
-  width: 334px;
+  max-height: calc(100vh - var(--heightTitle));
+  max-width: 40%;
 }
 @media screen and (max-width: 768px) {
   .bl_spScreenShot {
-    height: 540px;
-    width: 300px;
-  }
-  .bl_spScreenShot_wrapper {
+    max-width: 100%;
     margin-right: auto;
     margin-left: auto;
   }
 }
 
-.bl_bgiCarousel {
-  position: absolute;
-  top: 31px;
-  left: 20px;
-  height: 483px;
-  width: 296px;
+.bl_spCarousel {
+  height: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
 }
-@media screen and (max-width: 768px) {
-  .bl_bgiCarousel {
-    height: 430px;
-    width: 263px;
-  }
-}
-.bl_bgiCarouselli {
-  height: 483px;
-  width: 296px;
-}
-@media screen and (max-width: 768px) {
-  .bl_bgiCarouselli {
-    height: 430px;
-    width: 263px;
-  }
-}
-.bl_bgiCarousel_img {
-  border-radius: 3px;
-  height: 483px;
-  width: 296px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-@media screen and (max-width: 768px) {
-  .bl_bgiCarousel_img {
-    height: 430px;
-    width: 263px;
-  }
+.bl_spCarousel_img {
+  max-height: calc(100vh - var(--heightTitle));
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
-.bl_btnWrapper {
+.bl_contentBody_txt p {
+  font-size: 1.6rem;
+}
+.bl_contentBody_btn {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -137,10 +104,6 @@ a {
 
 .el_appleBtn img {
   width: 148px;
-}
-
-.bl_contentBody_text p {
-  font-size: 1.7rem;
 }
 
 .hp_mb60 {

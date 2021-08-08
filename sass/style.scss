@@ -1,12 +1,15 @@
 // ================================================================
 // CSS Custom Property
 // ================================================================
-
+:root {
+  --heightTitle: 170px;
+}
 // ================================================================
 // Sass Variable
 // ================================================================
 $widthBezel: 15px;
 $widthLimitOuter: 1000px + $widthBezel * 2;
+$heightTitle: var(--heightTitle);
 $breakpoint: 768px;
 // ================================================================
 // Sass Mixin
@@ -17,13 +20,18 @@ $breakpoint: 768px;
   }
 }
 @mixin fontFamily {
-  font-family: "Noto Serif", serif;
-  font-family: "Noto Serif JP", serif;
+  font-family: sans-serif;
+  // font-family: "Noto Serif", serif;
+  // font-family: "Noto Serif JP", serif;
 }
 // ================================================================
 // Media Query Value
 // ================================================================
-
+@include mq {
+  :root {
+    --heightTitle: 100px;
+  }
+}
 // ================================================================
 // base
 // ================================================================
@@ -40,7 +48,7 @@ a {
 // layout
 // ================================================================
 .ly_pageWrapper {
-  width: 100%;
+  // width: 100%;
   max-width: $widthLimitOuter;
   margin-right: auto;
   margin-left: auto;
@@ -53,84 +61,60 @@ a {
     flex-direction: column;
   }
 }
-.ly_contentBody {
-  margin-left: 80px;
-  @include mq {
-    margin-left: 0;
-  }
-}
 // ================================================================
 // module
 // ================================================================
 .el_pageTitle {
   font-size: 5rem;
   text-align: center;
+  margin-bottom: 60px;
   @include mq {
     font-size: 3rem;
+    margin-bottom: 30px;
   }
 }
 .bl_spScreenShot {
-  position: relative;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  box-sizing: border-box;
-  margin: 0;
-  height: 600px;
-  width: 334px;
+  max-height: calc(100vh - #{$heightTitle});
+  max-width: 40%;
   @include mq {
-    height: 540px;
-    width: 300px;
-    &_wrapper {
-      margin-right: auto;
-      margin-left: auto;
-    }
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
-.bl_bgiCarousel {
-  position: absolute;
-  top: 31px;
-  left: 20px;
-  height: 483px;
-  width: 296px;
+.bl_spCarousel {
+  height: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
-  @include mq {
-    height: 430px;
-    width: 263px;
-  }
-  &li {
-    height: 483px;
-    width: 296px;
-    @include mq {
-      height: 430px;
-      width: 263px;
-    }
-  }
   &_img {
-    border-radius: 3px;
-    height: 483px;
-    width: 296px;
-    object-fit: cover;
-    @include mq {
-      height: 430px;
-      width: 263px;
-    }
+    max-height: calc(100vh - #{$heightTitle});
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
-.bl_btnWrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.bl_contentBody {
+  &_txt {
+    p {
+      font-size: 1.6rem;
+    }
+  }
+  &_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
-.el_googleBtn img {
-  width: 200px;
+.el_googleBtn {
+  img {
+    width: 200px;
+  }
 }
-.el_appleBtn img {
-  width: 148px;
-}
-.bl_contentBody_text p {
-  font-size: 1.7rem;
+.el_appleBtn {
+  img {
+    width: 148px;
+  }
 }
 // ================================================================
 // helper

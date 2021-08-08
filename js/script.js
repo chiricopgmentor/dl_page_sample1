@@ -1,9 +1,9 @@
 const breakpoint = 768;
-const $bgiCarousel = $(".js_bgiCarousel");
+const $spCarousel = $(".js_spCarousel");
 $window = $(window);
 
 // 背景カルーセル
-$bgiCarousel.slick({
+$spCarousel.slick({
   autoplay: true,
   arrows: false,
 });
