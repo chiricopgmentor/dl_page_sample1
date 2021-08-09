@@ -116,8 +116,14 @@ a {
   }
 }
 
-.el_appleBtn img {
-  width: 148px;
+.el_appleBtn {
+  display: inline-block;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 100%;
+  height: 54px;
 }
 
 .hp_mb60 {
