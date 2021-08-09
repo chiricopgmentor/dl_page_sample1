@@ -104,11 +104,17 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    @include mq {
+      flex-direction: column;
+    }
   }
 }
 .el_googleBtn {
   img {
     width: 200px;
+  }
+  @include mq {
+    margin-bottom: 30px;
   }
 }
 .el_appleBtn {

@@ -97,9 +97,23 @@ a {
       -ms-flex-pack: center;
           justify-content: center;
 }
+@media screen and (max-width: 768px) {
+  .bl_contentBody_btn {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 
 .el_googleBtn img {
   width: 200px;
+}
+@media screen and (max-width: 768px) {
+  .el_googleBtn {
+    margin-bottom: 30px;
+  }
 }
 
 .el_appleBtn img {
